@@ -47,6 +47,18 @@ public class CustomListTest {
         });
     }
 
+    @Test
+    public void countCitiesTest(){
+        City newCity = new City("Halifax","Ns");
+        list.addCity(newCity);
+        City newCity2 = new City("Toronto","ON");
+        list.addCity(newCity2);
+        assertEquals(list.countCities(),2);
+        list.deleteCity(newCity);
+        list.deleteCity(newCity2);
+        assertEquals(list.countCities(),0);
+    }
+
 
 
 }
